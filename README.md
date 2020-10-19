@@ -72,6 +72,7 @@ document.addEventListener('deviceready', main);
 const auth0 = new Auth0Cordova({
   domain: "{YOUR_AUTH0_DOMAIN}",
   clientId: "{YOUR_AUTH0_CLIENT_ID}",
+  callbackURL: '{YOUR_CALLBACK_DEEPLINK_URL}',
   packageIdentifier: "{WIDGET_ID_IN_CONFIG_XML}"
 });
 
