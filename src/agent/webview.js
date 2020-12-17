@@ -12,7 +12,8 @@ function WebView() {
 
 WebView.prototype.open = function (url, handler) {
   var browser = window.cordova.InAppBrowser;
-  var tab = browser.open(url, '_blank');
+  var options = "'location=yes','usewkwebview=yes',hardwareback=yes,EnableViewPortScale=yes";
+  var tab = browser.open(url, '_blank',options);
 
   tab.addEventListener('loadstop', this.handleFirstLoadEnd);
   tab.addEventListener('loaderror', this.handleLoadError);
